@@ -10,6 +10,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         logging()
+        //division()
+      first()
     }
 }
 fun logging(){
@@ -19,4 +21,31 @@ fun logging(){
     Log.d(TAG,"This is a Debug message ")
     Log.i(TAG,"This is a info message")
     Log.w(TAG, "This is a warning")
+}
+fun division(){
+    val numerator=60
+    var denominator=4
+    repeat(5){
+        Log.v(TAG,"${numerator/denominator}")
+        denominator--
+    }
+}
+
+fun first() {
+    second()
+    Log.v(TAG, "1")
+}
+
+fun second() {
+    third()
+    Log.v(TAG, "2")
+    fourth()
+}
+
+fun third() {
+    Log.v(TAG, "3")
+}
+
+fun fourth() {
+    Log.v(TAG, "4")
 }
